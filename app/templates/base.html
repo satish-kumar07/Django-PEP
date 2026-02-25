@@ -1,0 +1,23 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %} Home Page {% endblock %}</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body class="dark-theme">
+    {% include 'components/navbar.html' %} {% block content %}
+    <h1>Welcome to India</h1>
+    <h3>This is base.html</h3>
+    {% endblock %} {% include 'components/footer.html'%}
+  </body>
+  <script src="{% static 'js/index.js' %}"></script>
+</html>
